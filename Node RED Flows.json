@@ -1,0 +1,686 @@
+[
+    {
+        "id": "5aaaa13.ece6d6",
+        "type": "tab",
+        "label": "Q Control",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b2907dad.3b4d88",
+        "type": "mqtt-broker",
+        "name": "MQQT",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f57a184e.4f4fa",
+        "type": "ui_tab",
+        "name": "PV Control System",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d7c12b74.277828",
+        "type": "ui_group",
+        "name": "PV Control",
+        "tab": "f57a184e.4f4fa",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false
+    },
+    {
+        "id": "1bd475c6.d8ad3a",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#c20000",
+                "baseFont": "Verdana,Verdana,Geneva,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#c20000",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#c20000",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#ff0f0f",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#c20000",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Verdana,Verdana,Geneva,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "4120bc84.e1bb74",
+        "type": "ui_group",
+        "name": "Controls",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "7ccde2ba.796d34",
+        "type": "ui_group",
+        "name": "Monitor",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b99fbf75.2a6ec",
+        "type": "serial-port",
+        "serialport": "COM5",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "538e811e.4dc51",
+        "type": "ui_group",
+        "name": "M2",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "ed06c71.0ebbf38",
+        "type": "ui_group",
+        "name": "M1",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "6d3003a60f02a4ee",
+        "type": "ui_group",
+        "name": "Monitor",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b49c79e595fa51c6",
+        "type": "serial-port",
+        "serialport": "COM7",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "61285987.c20328",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "0a0dac56d9b25a55",
+        "type": "ui_spacer",
+        "z": "5aaaa13.ece6d6",
+        "name": "spacer",
+        "group": "641c3b130ae859e9",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "4cddca7f468e68cc",
+        "type": "ui_spacer",
+        "z": "5aaaa13.ece6d6",
+        "name": "spacer",
+        "group": "641c3b130ae859e9",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "cc24e9a9bc99be44",
+        "type": "ui_group",
+        "name": "Terminal Voltage Monitoring",
+        "tab": "f57a184e.4f4fa",
+        "order": 3,
+        "disp": true,
+        "width": "9",
+        "collapse": false
+    },
+    {
+        "id": "a2885738cc813a14",
+        "type": "ui_group",
+        "name": "Reactive Power Monitoring",
+        "tab": "f57a184e.4f4fa",
+        "order": 2,
+        "disp": true,
+        "width": "9",
+        "collapse": false
+    },
+    {
+        "id": "2ae6863d.4dde9a",
+        "type": "ui_switch",
+        "z": "5aaaa13.ece6d6",
+        "name": "",
+        "label": "Activate",
+        "tooltip": "",
+        "group": "d7c12b74.277828",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "x": 340,
+        "y": 100,
+        "wires": [
+            [
+                "6e4f621f.b2f1e4"
+            ]
+        ]
+    },
+    {
+        "id": "6e4f621f.b2f1e4",
+        "type": "mqtt out",
+        "z": "5aaaa13.ece6d6",
+        "name": "",
+        "topic": "olly1/relay1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b2907dad.3b4d88",
+        "x": 570,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "04f2259d30fe03cb",
+        "type": "mqtt in",
+        "z": "5aaaa13.ece6d6",
+        "name": "",
+        "topic": "olly1/terima1",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "b2907dad.3b4d88",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 770,
+        "y": 100,
+        "wires": [
+            [
+                "3f605b7bba1f8799",
+                "1ba4d5d7086ec183"
+            ]
+        ]
+    },
+    {
+        "id": "1ba4d5d7086ec183",
+        "type": "ui_text",
+        "z": "5aaaa13.ece6d6",
+        "group": "d7c12b74.277828",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Status Activate",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1000,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "3f605b7bba1f8799",
+        "type": "debug",
+        "z": "5aaaa13.ece6d6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "5f5de9b70de5a3b6",
+        "type": "mqtt in",
+        "z": "5aaaa13.ece6d6",
+        "name": "",
+        "topic": "esp32/qinst",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "b2907dad.3b4d88",
+        "nl": false,
+        "rap": false,
+        "x": 770,
+        "y": 220,
+        "wires": [
+            [
+                "a2c7bf9018d04f65",
+                "59e604ece59631a7",
+                "1728de8199c6a4e5"
+            ]
+        ]
+    },
+    {
+        "id": "a2c7bf9018d04f65",
+        "type": "debug",
+        "z": "5aaaa13.ece6d6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 987,
+        "y": 187,
+        "wires": []
+    },
+    {
+        "id": "59e604ece59631a7",
+        "type": "ui_chart",
+        "z": "5aaaa13.ece6d6",
+        "name": "",
+        "group": "a2885738cc813a14",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Instantaneous Reactive Power (VAr)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-100000",
+        "ymax": "100000",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1070,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1728de8199c6a4e5",
+        "type": "ui_gauge",
+        "z": "5aaaa13.ece6d6",
+        "name": "",
+        "group": "a2885738cc813a14",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Instantaneous Reactive Power (VAr)",
+        "label": "VAr",
+        "format": "{{value}}",
+        "min": "-100000",
+        "max": "100000",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1070,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1706fbf9cd15fb33",
+        "type": "ui_text_input",
+        "z": "5aaaa13.ece6d6",
+        "name": "",
+        "label": "Q Reference (VAr)",
+        "tooltip": "",
+        "group": "d7c12b74.277828",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": "0",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "41ad34cc7cf674ee",
+                "ee553e225dec4556",
+                "2304f64bef86a745"
+            ]
+        ]
+    },
+    {
+        "id": "41ad34cc7cf674ee",
+        "type": "ui_text",
+        "z": "5aaaa13.ece6d6",
+        "group": "d7c12b74.277828",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Q Reference (VAr)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 410,
+        "y": 280,
+        "wires": [],
+        "inputLabels": [
+            "Irradiation"
+        ]
+    },
+    {
+        "id": "ee553e225dec4556",
+        "type": "debug",
+        "z": "5aaaa13.ece6d6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "2304f64bef86a745",
+        "type": "mqtt out",
+        "z": "5aaaa13.ece6d6",
+        "name": "",
+        "topic": "olly1/relay2",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b2907dad.3b4d88",
+        "x": 570,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "8a47589650754516",
+        "type": "mqtt in",
+        "z": "5aaaa13.ece6d6",
+        "name": "",
+        "topic": "esp32/vt",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "b2907dad.3b4d88",
+        "nl": false,
+        "rap": false,
+        "x": 760,
+        "y": 380,
+        "wires": [
+            [
+                "bc670b77b9f81971",
+                "313e715f85ca7088",
+                "a4dafa734031d86b"
+            ]
+        ]
+    },
+    {
+        "id": "bc670b77b9f81971",
+        "type": "debug",
+        "z": "5aaaa13.ece6d6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 990,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "313e715f85ca7088",
+        "type": "ui_chart",
+        "z": "5aaaa13.ece6d6",
+        "name": "",
+        "group": "cc24e9a9bc99be44",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Terminal Voltage (V)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "500",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1020,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a4dafa734031d86b",
+        "type": "ui_gauge",
+        "z": "5aaaa13.ece6d6",
+        "name": "",
+        "group": "cc24e9a9bc99be44",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Terminal Voltage (V)",
+        "label": "Voltage",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1020,
+        "y": 440,
+        "wires": []
+    }
+]
